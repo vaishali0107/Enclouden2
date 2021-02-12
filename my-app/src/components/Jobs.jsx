@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import {Link,BrowserRouter as Router,Route,Switch} from "react-router-dom"
 import axios from "axios";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import ReactMarkdown from "react-markdown"
 
 export default function Jobs(props) {
@@ -26,7 +27,7 @@ export default function Jobs(props) {
             setpage(page=page+1)
         }
         else{
-            alert("No more data")
+            toast.error("No more data")
         }    
     }
     const idHandler=()=>{
@@ -56,6 +57,7 @@ export default function Jobs(props) {
                     </div>
                     </div>
                 )})}
+                <ToastContainer/>
          </div>
          <div>
             <button className="btn btn-primary" style={{position:"relative",left:"50%",margin:"20px"}} onClick={nextDataHandler}>Load more</button>
