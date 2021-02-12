@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {Link,BrowserRouter as Router,Route,Switch} from "react-router-dom"
 import axios from "axios";
-import Details from "./Details"
+
 import ReactMarkdown from "react-markdown"
 
 export default function Jobs(props) {
